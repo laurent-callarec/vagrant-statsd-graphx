@@ -36,9 +36,17 @@ Vagrant.configure("2") do |config|
     chef.add_recipe "graphite::carbon"
     chef.add_recipe "graphite::whisper"    
     chef.add_recipe "graphite::dashboard"
+    chef.add_recipe "grafana"    
 
     chef.json = {
-      "statsd" => {"nodejs_bin" => "/usr/bin/node"}
+      "statsd" => {"nodejs_bin" => "/usr/bin/node"},
+      "graphite" => {
+        "version" => "0.9.12"
+      },
+      "grafana" => {
+        "webserver_port"   => "81",
+        "webserver_listen" => ""
+      }
     }
 
   end

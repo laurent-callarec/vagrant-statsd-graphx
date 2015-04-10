@@ -5,6 +5,7 @@ site 'https://supermarket.getchef.com/api/v1'
 
 cookbook 'apt'
 cookbook "statsd", :git => "https://github.com/hectcastro/chef-statsd"
-cookbook 'graphite', git: 'https://github.com/hectcastro/chef-graphite'
+cookbook 'graphite', :git => 'https://github.com/hectcastro/chef-graphite'
+cookbook "grafana", :git => 'https://github.com/JonathanTron/chef-grafana'
 cookbook 'nodejs', '~> 2.4.0'
 cookbook 'git'

@@ -10,6 +10,8 @@ SITE
     ark (0.9.0)
       7-zip (>= 0.0.0)
       windows (>= 0.0.0)
+    bluepill (2.3.1)
+      rsyslog (>= 0.0.0)
     build-essential (2.2.2)
     chef_handler (1.1.6)
     dmg (2.2.2)
@@ -24,15 +26,24 @@ SITE
       build-essential (>= 2.1.2)
     iptables (1.0.0)
     logrotate (1.9.1)
+    nginx (2.7.6)
+      apt (~> 2.2)
+      bluepill (~> 2.3)
+      build-essential (~> 2.0)
+      ohai (~> 2.0)
+      runit (~> 1.2)
+      yum-epel (~> 0.3)
     nodejs (2.4.0)
       apt (>= 0.0.0)
       ark (>= 0.0.0)
       build-essential (>= 0.0.0)
       homebrew (>= 0.0.0)
       yum-epel (>= 0.0.0)
+    ohai (2.0.1)
     python (1.4.6)
       build-essential (>= 0.0.0)
       yum-epel (>= 0.0.0)
+    rsyslog (1.15.0)
     runit (1.5.18)
       build-essential (>= 0.0.0)
       yum (~> 3.0)
@@ -42,6 +53,16 @@ SITE
     yum (3.5.4)
     yum-epel (0.6.0)
       yum (~> 3.0)
+
+GIT
+  remote: https://github.com/JonathanTron/chef-grafana
+  ref: master
+  sha: b5bd9270c4bed83bfbf6de8eace733265772fbea
+  specs:
+    grafana (1.5.5)
+      ark (>= 0.7.2)
+      git (>= 0.0.0)
+      nginx (>= 0.0.0)
 
 GIT
   remote: https://github.com/hectcastro/chef-graphite
@@ -69,6 +90,7 @@ GIT
 DEPENDENCIES
   apt (>= 0)
   git (>= 0)
+  grafana (>= 0)
   graphite (>= 0)
   nodejs (~> 2.4.0)
   statsd (>= 0)
