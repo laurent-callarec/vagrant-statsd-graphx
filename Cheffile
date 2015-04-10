@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'https://supermarket.getchef.com/api/v1'
+
+cookbook 'apt'
+cookbook "statsd", :git => "https://github.com/hectcastro/chef-statsd"
+cookbook 'graphite', git: 'https://github.com/hectcastro/chef-graphite'
+cookbook 'nodejs', '~> 2.4.0'
+cookbook 'git'
